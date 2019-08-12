@@ -790,6 +790,7 @@ CURLcode Curl_is_connected(struct connectdata *conn,
         conn->sock[sockindex] = conn->tempsock[i];
         conn->ip_addr = conn->tempaddr[i];
         conn->tempsock[i] = CURL_SOCKET_BAD;
+        connkeep(conn, "HTTP/3 default");
       }
       return result;
     }
