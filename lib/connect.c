@@ -859,7 +859,9 @@ CURLcode Curl_is_connected(struct connectdata *conn,
     else if(rc & CURL_CSELECT_ERR)
       (void)verifyconnect(conn->tempsock[i], &error);
 
+#ifdef ENABLE_QUIC
     error:
+#endif
     /*
      * The connection failed here, we should attempt to connect to the "next
      * address" for the given host. But first remember the latest error.
