@@ -20,7 +20,9 @@
  *
  ***************************************************************************/
 
+#ifndef USE_LWIPSOCK
 #include <errno.h>
+#endif
 #include "curl_setup.h"
 
 #include "strtoofft.h"

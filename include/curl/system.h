@@ -387,7 +387,7 @@
 #  endif
 #  define CURL_TYPEOF_CURL_SOCKLEN_T socklen_t
 #  define CURL_PULL_SYS_TYPES_H      1
-#  define CURL_PULL_SYS_SOCKET_H     1
+//#  define CURL_PULL_SYS_SOCKET_H     1
 
 #else
 /* generic "safe guess" on old 32 bit style */
@@ -423,6 +423,10 @@
 /* sys/socket.h is required here to properly make type definitions below. */
 #ifdef CURL_PULL_SYS_SOCKET_H
 #  include <sys/socket.h>
+#endif
+
+#if defined(USE_LWIPSOCK)
+#include <lwip/sockets.h>
 #endif
 
 /* CURL_PULL_SYS_POLL_H is defined above when inclusion of header file    */
