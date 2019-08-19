@@ -283,6 +283,28 @@
 #  include <lwip/init.h>
 #  include <lwip/sockets.h>
 #  include <lwip/netdb.h>
+#define HAVE_STRUCT_TIMEVAL
+#define HAVE_SELECT
+#define HAVE_RECV 1
+#define RECV_TYPE_ARG1 int
+#define RECV_TYPE_ARG2 void *
+#define RECV_TYPE_ARG3 size_t
+#define RECV_TYPE_ARG4 int
+#define RECV_TYPE_RETV int
+   
+#define HAVE_SEND 1
+#define SEND_TYPE_ARG1 int
+#define SEND_QUAL_ARG2 const
+#define SEND_TYPE_ARG2 void *
+#define SEND_TYPE_ARG3 size_t
+#define SEND_TYPE_ARG4 int
+#define SEND_TYPE_RETV int
+
+#define SIZEOF_INT 4
+#define SIZEOF_SHORT 2
+#define SIZEOF_LONG 4
+#define SIZEOF_CURL_OFF_T 8
+#define SIZEOF_SIZE_T 4
 #endif
 
 #ifdef HAVE_EXTRA_STRICMP_H

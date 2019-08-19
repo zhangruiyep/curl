@@ -1,3 +1,11 @@
+This is a libcurl port which target is work on bl60x.
+
+It is base on freertos + lwip + mbedtls. Compiler is gcc-arm-none-eabi-4_9-2015q3.
+
+
+
+
+
 ![curl logo](https://curl.haxx.se/logo/curl-logo.svg)
 
 [![CII Best Practices](https://bestpractices.coreinfrastructure.org/projects/63/badge)](https://bestpractices.coreinfrastructure.org/projects/63)

@@ -79,11 +79,11 @@
 #include <sys/select.h>
 #endif
 
-#if !defined(WIN32) && !defined(_WIN32_WCE)
+#if !defined(WIN32) && !defined(_WIN32_WCE) && !defined(USE_LWIPSOCK)
 #include <sys/socket.h>
 #endif
 
-#if !defined(WIN32) && !defined(__WATCOMC__) && !defined(__VXWORKS__)
+#if !defined(WIN32) && !defined(__WATCOMC__) && !defined(__VXWORKS__) && !defined(USE_LWIPSOCK)
 #include <sys/time.h>
 #endif
 
